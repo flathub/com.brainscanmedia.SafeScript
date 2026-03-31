@@ -18,6 +18,7 @@ modules:
         commit: 016d54c26f708225f1be2502718637f3782be423
     post-install:
       - install -Dm755 SafeScript /app/bin/SafeScript
-      - install -Dm644 safescript.png /app/share/icons/hicolor/256x256/apps/com.brainscanmedia.SafeScript.png
-      - install -Dm644 safescript.desktop /app/share/applications/com.brainscanmedia.SafeScript.desktop
-      - install -Dm644 com.brainscanmedia.SafeScript.metainfo.xml /app/share/metainfo/com.brainscanmedia.SafeScript.metainfo.xml
+      - install -Dm644 safescript.png /app/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png
+      - install -Dm644 safescript.desktop /app/share/applications/${FLATPAK_ID}.desktop
+      - desktop-file-edit --set-key=Icon --set-value=${FLATPAK_ID} /app/share/applications/${FLATPAK_ID}.desktop
+      - install -Dm644 ${FLATPAK_ID}.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml
