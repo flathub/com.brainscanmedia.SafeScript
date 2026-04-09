@@ -15,10 +15,10 @@ modules:
     sources:
       - type: git
         url: https://github.com/BrainScanMedia/SafeScript.git
-        commit: 40b7c5667b1ecab7b926bab86255fb05dba95148
+        commit: ee5c5b5b791df4f6da010cfd37c8404d3a24790c
     post-install:
       - install -Dm755 SafeScript /app/bin/SafeScript
-      - install -Dm644 safescript.png /app/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png
+      - install -Dm644 safescript.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
       - install -Dm644 safescript.desktop /app/share/applications/${FLATPAK_ID}.desktop
       - desktop-file-edit --set-key=Icon --set-value=${FLATPAK_ID} /app/share/applications/${FLATPAK_ID}.desktop
       - install -Dm644 ${FLATPAK_ID}.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml
