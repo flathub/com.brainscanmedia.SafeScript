@@ -16,7 +16,7 @@ modules:
       - type: git
         url: https://github.com/BrainScanMedia/SafeScript.git
         tag: v1.2.6
-        commit: 43e8e79128920af647c2a4f1881d3fde4bfaa3ce
+        commit: fa01fe95d466adee9af2fb215521c0b5f6e9216a
     post-install:
       - install -Dm755 SafeScript /app/bin/SafeScript
       - install -Dm644 safescript.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
